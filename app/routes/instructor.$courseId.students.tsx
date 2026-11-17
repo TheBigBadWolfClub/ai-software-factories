@@ -27,7 +27,7 @@ import {
   notes,
   LessonProgressStatus,
 } from "~/db/schema";
-import { eq, and, or, sql, desc, inArray, isNull, max } from "drizzle-orm";
+import { eq, and, or, sql, desc, inArray, max } from "drizzle-orm";
 
 function getUserById(id: number) {
   return db.select().from(users).where(eq(users.id, id)).get();
